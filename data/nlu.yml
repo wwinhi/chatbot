@@ -1,0 +1,303 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - Xin chào
+    - Chào
+    - Bạn có thể hổ trợ tôi không
+    - Tôi cần trợ giúp
+    - Chào bạn
+    - Hi
+    - Chào buổi sáng
+    - Chào bạn, tôi cần hỏi về sản phẩm
+    - chào
+- intent: fallback
+  examples: |
+    - Tôi không hiểu
+    - Bạn có thể nói lại không?
+    - Không rõ ý bạn
+    - Làm ơn giải thích thêm
+    - Tôi không hiểu bạn đang nói gì
+    - Bạn có thể làm rõ không?
+    - Tôi chưa hiểu
+    - Có thể giải thích thêm không?
+- intent: goodbye
+  examples: |
+    - Cảm ơn đã giúp tôi
+    - Cảm ơn
+    - Bạn đã giúp tôi nhiều đấy
+    - Cảm ơn nha
+    - Tks
+    - Tạm biệt
+    - Hẹn gặp lại
+    - Chúc bạn một ngày tốt lành
+    - Cảm ơn và tạm biệt
+- intent: track_order
+  examples: |
+    - Tôi muốn kiểm tra đơn hàng [12345](order_id)
+    - Trạng thái đơn hàng [67890](order_id) là gì?
+    - Kiểm tra giúp tôi đơn hàng [11111](order_id)
+    - Tôi cần tra cứu đơn hàng.
+    - [67890](order_id)
+    - Đơn hàng [54321](order_id) của tôi đang ở đâu?
+    - Kiểm tra tiến độ đơn hàng [22222](order_id)
+    - Thông tin đơn hàng [98765](order_id) là gì?
+    - Đơn hàng [55555](order_id) đã giao chưa?
+    - Tôi muốn biết tình trạng đơn hàng [99999](order_id)
+    - Đơn hàng [1234](order_id) của tôi có vấn đề gì không?
+    - Tình trạng giao hàng của đơn hàng [65432](order_id) như thế nào?
+    - Đơn hàng của tôi [9876](order_id) đã được vận chuyển chưa?
+    - Kiểm tra đơn hàng [112233](order_id) giúp tôi với.
+    - Đơn hàng [33445](order_id) của tôi có bị trễ không?
+    - Tôi muốn tra cứu thông tin đơn hàng [44556](order_id)
+    - Đơn hàng của tôi [77777](order_id) còn lại bao lâu nữa để giao?
+    - Kiểm tra đơn hàng [88888](order_id) xem đã chuyển đến đâu?
+    - Tôi muốn biết tình trạng đơn hàng [99988](order_id)
+    - Đơn hàng [121212](order_id) đang ở kho hay đã xuất đi rồi?
+- intent: ask_product_status
+  examples: |
+    - "Sản phẩm [Samsung Galaxy S22](product_name) còn hàng không?"
+    - "[Iphone 15 Pro max](product_name) có sẵn không?"
+    - "Tình trạng hàng hóa của [Xiaomi 13T](product_name) thế nào?"
+    - [Samsung Galaxy S22](product_name)
+    - [Iphone 15 Pro max](product_name)
+    - [Xiaomi 13T](product_name)
+    - [Samsung Galaxy Note 20](product_name) còn hàng không?
+    - [Oppo Reno 8](product_name) có sẵn không?
+    - Tình trạng của [iPhone 14 Pro](product_name) thế nào?
+    - [Realme GT](product_name) còn hàng không?
+    - [Vivo V27e](product_name) còn không?
+    - [Xiaomi Mi 11 Ultra](product_name) có hàng không?
+    - Còn [Samsung A73](product_name) không?
+    - Tôi cần tìm điện thoại [Xiaomi 13T](product_name)
+    - Tìm điện thoại [Xiaomi 13T](product_name) giúp tôi
+    - Tôi muốn mua điện thoại [Xiaomi 13T](product_name)
+    - Sản phẩm nào còn hàng không?
+    - Cửa hàng mình còn hàng không?
+    - Có hàng không?
+    - Tôi muốn tìm sản phẩm
+    - Tôi muốn hỏi về tình trạng sản phẩm
+    - Sản phẩm này còn hàng không?
+    - Điện thoại này cửa hàng mình có không?
+    - Điện thoại này mình có không?
+    - Có sản phẩm nào còn hàng không?
+    - Cửa hàng mình có điện thoại mới không?
+    - Tôi cần biết tình trạng hàng hóa
+    - Sản phẩm nào đang có sẵn?
+    - Mình muốn tìm sản phẩm còn hàng
+    - cửa hàng bạn còn điện thoại [xiaomi 13T]{"entity": "product_name", "value": "Xiaomi 13T"} chứ?
+- intent: payment_method
+  examples: |
+    - Shop có hỗ trợ thanh toán qua thẻ tín dụng quốc tế không?
+    - Tôi có thể thanh toán bằng thẻ Visa Debit không?
+    - Có thể thanh toán qua hình thức quét QR không?
+    - Cửa hàng có nhận thanh toán qua dịch vụ chuyển tiền quốc tế không?
+    - Shop có nhận thanh toán qua ngân hàng Sacombank không?
+    - Tôi có thể thanh toán khi nhận hàng qua chuyển khoản không?
+    - Cửa hàng có chấp nhận thanh toán qua chuyển khoản qua tài khoản của ngân hàng khác không?
+    - Tôi muốn thanh toán bằng ZaloPay, làm sao để thực hiện?
+    - Thanh toán qua ví điện tử nào là nhanh nhất?
+    - Tôi muốn thanh toán bằng mã QR trên điện thoại của mình.
+    - Cửa hàng có hỗ trợ thanh toán qua các ứng dụng ngân hàng không?
+    - Làm sao để tôi thanh toán qua hình thức chuyển tiền qua bưu điện?
+    - Tôi có thể thanh toán bằng Momo không?
+    - Cửa hàng có chấp nhận thanh toán qua thẻ Mastercard không?
+    - Tôi có thể thanh toán khi nhận hàng bằng thẻ không?
+    - Tôi muốn thanh toán qua tiền mặt tại cửa hàng, có được không?
+    - Shop có hỗ trợ thanh toán qua ngân hàng Vietcombank không?
+    - Tôi có thể thanh toán qua các hình thức thanh toán quốc tế không?
+    - Có hỗ trợ thanh toán qua QR code không?
+    - Tôi muốn biết cách thanh toán qua thẻ tín dụng.
+- intent: return_policy
+  examples: |
+    - Shop có chính sách đổi trả không?
+    - Làm sao để trả lại hàng?
+    - Chính sách hoàn tiền thế nào?
+    - Đổi trả hàng có mất phí không?
+    - Thời gian đổi trả là bao lâu?
+    - Shop hỗ trợ đổi trả như thế nào?
+    - Tôi muốn đổi sản phẩm
+    - Làm sao để yêu cầu hoàn tiền?
+    - Nếu tôi không hài lòng với sản phẩm, có thể đổi lại không?
+    - Tôi muốn trả hàng đã mua, có thể làm gì?
+    - Chính sách trả hàng của shop ra sao?
+    - Sau khi nhận hàng, tôi có thể đổi lại không?
+    - Có thể hoàn tiền cho sản phẩm đã mua không?
+    - Có mất phí khi đổi hàng không?
+    - Chính sách bảo hành và đổi trả như thế nào?
+    - Đổi sản phẩm có cần hóa đơn không?
+    - Sản phẩm lỗi có thể trả lại được không?
+    - Thời gian trả hàng tối đa là bao lâu?
+    - Tôi muốn đổi sản phẩm nhưng không biết phải làm gì?
+    - Có thể yêu cầu đổi sản phẩm khác không?
+    - Nếu hàng bị lỗi, có thể đổi hoặc trả lại không?
+    - Quy trình đổi trả hàng nhanh nhất là gì?
+    - Chính sách đổi trả ở cửa hàng bạn như thế nào
+- intent: product_defect
+  examples: |
+    - Tôi nhận được hàng bị lỗi
+    - Sản phẩm bị hỏng, shop xử lý sao?
+    - Giao hàng sai, shop giải quyết như thế nào?
+    - Tôi mua hàng nhưng bị thiếu phụ kiện
+    - Tôi muốn báo lỗi sản phẩm
+    - Hàng nhận được bị méo mó
+    - Shop giao nhầm màu, làm sao để đổi?
+    - Sản phẩm không hoạt động, tôi muốn đổi
+    - Tôi nhận sai sản phẩm, shop hỗ trợ đổi được không?
+    - Tôi cần hỗ trợ về sản phẩm bị lỗi
+    - Sản phẩm bị lỗi, tôi cần trả lại
+    - Sản phẩm bị trầy xước, làm sao để đổi?
+    - Sản phẩm không giống mô tả, tôi muốn hoàn trả
+    - Tôi muốn khiếu nại về sản phẩm bị lỗi
+    - Hàng bị vỡ, tôi muốn đổi hoặc trả lại
+- intent: delivery_time
+  examples: |
+    - Bao lâu thì nhận được hàng?
+    - Thời gian giao hàng là bao lâu?
+    - Shop giao hàng trong bao lâu?
+    - Tôi sẽ nhận hàng khi nào?
+    - Giao hàng trong ngày được không?
+    - Giao hàng có nhanh không?
+    - Mất mấy ngày để giao hàng?
+    - Thời gian giao hàng là bao lâu đối với khu vực này?
+    - Đơn hàng của tôi sẽ được giao khi nào?
+    - Mình sẽ nhận hàng trong vòng mấy ngày?
+    - Giao hàng vào cuối tuần có được không?
+    - Cửa hàng có giao hàng nhanh không?
+    - Giao hàng có thể chọn giờ cố định không?
+    - Đơn hàng của tôi có thể giao trong hôm nay không?
+    - Mất bao lâu để giao hàng đến [Hà Nội](location)?
+- intent: promotion
+  examples: |
+    - Có khuyến mãi không?
+    - Shop có giảm giá không?
+    - Mình được ưu đãi gì không?
+    - Sản phẩm này có khuyến mãi không?
+    - Có mã giảm giá không?
+    - Có chương trình tặng quà không?
+    - Shop đang khuyến mãi gì vậy?
+    - Cửa hàng đang có chương trình ưu đãi nào?
+    - Khi nào thì shop có chương trình giảm giá?
+    - Khuyến mãi áp dụng cho sản phẩm này là gì?
+    - Tôi có thể nhận mã giảm giá ở đâu?
+    - Có giảm giá cho khách hàng lần đầu không?
+    - Khuyến mãi cho [Samsung Galaxy S22](product_name) là gì?
+    - Làm sao để nhận được quà tặng từ shop?
+    - Mình có thể dùng mã giảm giá vào lúc nào?
+- intent: shipping_fee
+  examples: |
+    - Phí giao hàng là bao nhiêu?
+    - Giao hàng có tính phí không?
+    - Miễn phí vận chuyển không?
+    - Tôi muốn biết chi phí vận chuyển
+    - Vận chuyển có mất tiền không?
+    - Ship hàng có tốn phí không?
+    - Cửa hàng có miễn phí vận chuyển không?
+    - Tôi phải trả bao nhiêu phí vận chuyển cho đơn hàng này?
+    - Phí giao hàng cho khu vực [Hà Nội](location) là bao nhiêu?
+    - Giao hàng có tính phí theo trọng lượng không?
+    - Shop có giảm phí vận chuyển không?
+    - Phí giao hàng có thay đổi tùy theo sản phẩm không?
+    - Phí giao hàng có khác nhau giữa các khu vực không?
+    - Tôi có thể chọn giao hàng miễn phí không?
+- intent: store_location
+  examples: |
+    - Shop ở đâu?
+    - Cửa hàng có địa chỉ nào?
+    - Làm sao để đến shop?
+    - Địa chỉ của shop là gì?
+    - Shop có chi nhánh ở [Hà Nội](location) không?
+    - Shop có ở TP.HCM không?
+    - Shop có gần đây không?
+    - Cửa hàng của bạn có chi nhánh ở [Hà Nội](location) không?
+    - Liệu cửa hàng có ở [Hồ Chí Minh](location) không?
+    - Mình muốn biết cửa hàng có chi nhánh tại [Đà Nẵng](location) không?
+    - Bạn có cửa hàng nào ở khu vực [Quận 1, TP.HCM](location) không?
+    - Chịu khó cho tôi hỏi, cửa hàng ở [Cần Thơ](location) có không?
+    - Các chi nhánh của cửa hàng có ở [Hải Phòng](location) không?
+    - Tôi muốn biết có cửa hàng nào ở [Bắc Ninh](location) không?
+    - Các cửa hàng có chi nhánh tại [TP.HCM](location) không?
+    - Cửa hàng ở [Hà Nội](location) có bán sản phẩm này không?
+    - Bạn có cửa hàng ở [Nha Trang](location) không?
+- intent: warranty_policy
+  examples: |
+    - Chính sách bảo hành của shop là gì?
+    - Sản phẩm này bảo hành bao lâu?
+    - Làm sao để kích hoạt bảo hành?
+    - Tôi muốn sửa sản phẩm, shop hỗ trợ không?
+    - Tôi cần thông tin bảo hành cho [iPhone 14](product_name)
+    - Bảo hành có mất phí không?
+    - Trung tâm bảo hành của shop ở đâu?
+    - Tôi cần đổi hàng trong thời gian bảo hành
+    - Bảo hành sản phẩm lỗi được bao lâu?
+    - Shop có hỗ trợ sửa chữa không?
+    - Bảo hành có áp dụng cho sản phẩm đã qua sử dụng không?
+    - Sau bao lâu tôi có thể yêu cầu bảo hành?
+    - Nếu sản phẩm không thể sửa chữa, tôi có thể đổi trả không?
+    - Shop có bảo hành cho phụ kiện không?
+    - Tôi muốn biết chính sách bảo hành cho [Samsung Galaxy S23](product_name)
+    - Chính sách bảo hành bên cửa hàng mình như thế nào?
+- intent: complaint
+  examples: |
+    - Tôi muốn khiếu nại về dịch vụ
+    - Shop xử lý không đúng, tôi cần giải thích
+    - Tôi không hài lòng với chất lượng hàng hóa
+    - Tôi muốn báo cáo sự cố khi đặt hàng
+    - Làm sao để gửi phản hồi đến shop?
+    - Tôi gặp vấn đề và muốn nói chuyện với người quản lý
+    - Đơn hàng của tôi bị chậm, tôi muốn khiếu nại
+    - Shop không giao đúng sản phẩm, giải quyết thế nào?
+    - Tôi muốn liên hệ bộ phận khiếu nại
+    - Tôi cần hỗ trợ gấp về vấn đề này
+    - Đơn hàng của tôi bị sai, làm sao để chỉnh sửa?
+    - Chất lượng sản phẩm không như quảng cáo, tôi muốn phản ánh
+    - Dịch vụ giao hàng quá chậm, tôi muốn khiếu nại
+    - Mình đã nhận sai sản phẩm, shop có thể đổi không?
+    - Tôi muốn yêu cầu hỗ trợ từ bộ phận khiếu nại
+- intent: working_hours
+  examples: |
+    - Cửa hàng làm việc đến mấy giờ?
+    - Bạn mở cửa lúc mấy giờ?
+    - Thời gian làm việc của cửa hàng là gì?
+    - Mấy giờ bạn bắt đầu làm việc?
+    - Khi nào cửa hàng đóng cửa?
+    - Cửa hàng của bạn làm việc từ mấy giờ đến mấy giờ?
+    - Khi nào cửa hàng mở cửa?
+    - Mấy giờ thì cửa hàng đóng cửa?
+    - Giờ làm việc của shop là bao lâu?
+    - Cửa hàng có mở cửa vào cuối tuần không?
+    - Cửa hàng của bạn mở cửa đến mấy giờ?
+    - Các ngày trong tuần cửa hàng mở cửa từ bao nhiêu giờ?
+    - Cửa hàng của bạn có làm việc vào ngày lễ không?
+    - Mình có thể đến cửa hàng vào giờ nào?
+    - Shop làm việc bao nhiêu giờ mỗi ngày?
+- intent: check_warranty_with_product
+  examples: |
+    - Sản phẩm [iPhone 14](product_name) của tôi còn bảo hành không? Mã đơn hàng của tôi là [12345](order_id)
+    - Điện thoại [Samsung Galaxy S21](product_name) của tôi bảo hành đến khi nào? Đơn hàng [67890](order_id)
+    - Làm sao để kiểm tra thời gian bảo hành của [Xiaomi Mi 11](product_name)? Mã đơn hàng là [11223](order_id)
+    - Tôi muốn biết thông tin bảo hành của [iPhone 13 Pro Max](product_name). Mã đơn hàng của tôi là [33445](order_id)
+    - Bảo hành của sản phẩm [Samsung Galaxy Z Flip](product_name) hết hạn chưa? Đơn hàng [55667](order_id)
+    - Tôi cần xác nhận tình trạng bảo hành của [Realme 8 Pro](product_name). Mã đơn hàng là [77889](order_id)
+    - [iPhone 12](product_name) của tôi còn trong thời gian bảo hành không? Đơn hàng [99000](order_id)
+    - Bảo hành của [Huawei P40](product_name) khi nào hết hạn? Mã đơn hàng là [11121](order_id)
+    - Tôi có thể kiểm tra bảo hành của [OnePlus 9 Pro](product_name) như thế nào? Đơn hàng [33452](order_id)
+    - Sản phẩm [Google Pixel 6](product_name) của tôi có còn bảo hành không? Mã đơn hàng là [44563](order_id)
+    - Tôi cần thông tin về bảo hành của [Oppo F19](product_name). Đơn hàng [55674](order_id)
+    - Làm sao để biết [Xiaomi Redmi Note 10](product_name) còn bảo hành không? Mã đơn hàng là [66785](order_id)
+    - Bảo hành của điện thoại [Vivo V21](product_name) hết bao lâu? Đơn hàng [77896](order_id)
+    - Kiểm tra bảo hành của [Sony Xperia 1 III](product_name) được không? Mã đơn hàng là [88907](order_id)
+    - Tôi muốn biết thời gian bảo hành của sản phẩm [Samsung Galaxy Note 20](product_name). Đơn hàng [99018](order_id)
+    - Điện thoại của tôi bị lỗi, còn trong thời gian bảo hành không?
+    - Tôi có thể kiểm tra bảo hành sản phẩm như thế nào?
+    - Làm sao để biết sản phẩm của tôi có bảo hành không?
+    - Tôi muốn biết cách kiểm tra thời gian bảo hành của điện thoại.
+    - Tôi không biết sản phẩm của mình còn bảo hành không, làm thế nào để kiểm tra?
+    - Bảo hành của tôi hết hạn chưa?
+    - Sản phẩm này có còn bảo hành không?
+    - Làm sao để kiểm tra bảo hành nếu không nhớ thời gian mua?
+    - Tôi muốn hỏi về cách kiểm tra bảo hành khi không nhớ tên sản phẩm.
+- intent: call_OpenFaaS
+  examples: |
+    - Kết nối OpenFaaS
+    - Mở OpenFaaS

@@ -1,0 +1,88 @@
+version: '3.1'
+intents:
+- ask_product_status
+- call_OpenFaaS
+- check_warranty_with_product
+- complaint
+- delivery_time
+- goodbye
+- greet
+- payment_method
+- product_defect
+- promotion
+- return_policy
+- shipping_fee
+- store_location
+- track_order
+- warranty_policy
+- working_hours
+entities:
+- product_name
+- order_id
+- location  
+responses:
+  utter_greet:
+  - text: Chào bạn! Tôi có thể giúp gì cho bạn hôm nay?
+  utter_goodbye:
+  - text: Cảm ơn bạn đã sử dụng dịch vụ. Tạm biệt!
+  utter_payment_method:
+  - text: Shop hỗ trợ nhiều phương thức thanh toán như thẻ tín dụng, thanh toán qua MoMo, hoặc thanh toán COD.
+  utter_return_policy:
+  - text: Shop có chính sách đổi trả sản phẩm trong vòng 7 ngày.
+  utter_product_defect:
+  - text: Vui lòng đợi, tôi sẽ chuyển bạn đến CSKH.
+  utter_shipping_fee:
+  - text: Phí vận chuyển tùy thuộc vào địa chỉ của bạn, vui lòng cung cấp thông tin chi tiết.
+  utter_delivery_time:
+  - text: |
+      Thời gian giao hàng sẽ phụ thuộc vào địa điểm giao hàng:
+      - Nếu bạn ở nội thành thành phố thì khoảng 30p - 1h
+      - Nếu bạn ở ngoại thành thành phố thì khoảng 4 - 5 tiếng tùy thuộc vào khoảng cách
+  utter_store_location:
+  - text: Cửa hàng của chúng tôi có mặt tại số 73 Nguyễn Huệ, Phường 2, Thành phố Vĩnh Long, Tỉnh Vĩnh Long .
+  utter_warranty_policy:
+  - text: Sản phẩm của chúng tôi được bảo hành từ 6 tháng đến 1 năm tùy theo loại sản phẩm.
+  utter_complaint:
+  - text: Chúng tôi rất tiếc về sự cố bạn gặp phải. Bạn vui lòng cung cấp thêm thông tin về khiếu nại?
+  utter_working_hours:
+  - text: Cửa hàng mở cửa từ 9:00 sáng đến 6:00 chiều, từ thứ Hai đến thứ Bảy.
+  utter_ask_order_id:
+  - text: |-
+      Vui lòng cung cấp mã đơn hàng để tôi tra cứu cho bạn.
+       Ví dụ mã đơn hàng là: xyz12345
+  utter_default_fallback:
+  - text: Xin lỗi, tôi không hiểu câu hỏi của bạn. Bạn có thể thử đặt lại không?
+actions:
+- utter_goodbye
+- utter_warranty_policy
+- action_check_product_status
+- utter_greet
+- action_track_order
+- action_check_warranty
+- action_transfer_to_cskh
+- action_default_fallback
+- action_go_to_promotion_page
+- action_call_openfaas
+slots:
+  product_name:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: product_name
+  order_id:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: order_id
+  product_status:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: custom
+
+
+session_config:
+  session_expiration_time: 180
+  carry_over_slots_to_new_session: true

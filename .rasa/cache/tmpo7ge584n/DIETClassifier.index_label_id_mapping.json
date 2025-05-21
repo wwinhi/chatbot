@@ -1,0 +1,19 @@
+{
+  "0": "ask_product_status",
+  "1": "call_OpenFaaS",
+  "2": "check_warranty_with_product",
+  "3": "complaint",
+  "4": "delivery_time",
+  "5": "fallback",
+  "6": "goodbye",
+  "7": "greet",
+  "8": "payment_method",
+  "9": "product_defect",
+  "10": "promotion",
+  "11": "return_policy",
+  "12": "shipping_fee",
+  "13": "store_location",
+  "14": "track_order",
+  "15": "warranty_policy",
+  "16": "working_hours"
+}

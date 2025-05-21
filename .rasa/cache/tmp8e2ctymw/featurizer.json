@@ -1,0 +1,55 @@
+{
+  "type": "IntentMaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "ask_availability": 0,
+        "ask_price": 1,
+        "ask_product": 2,
+        "back": 3,
+        "faq": 4,
+        "goodbye": 5,
+        "greet": 6,
+        "inform": 7,
+        "nlu_fallback": 8,
+        "out_of_scope": 9,
+        "restart": 10,
+        "session_start": 11
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "utter_price_info": 13,
+        "utter_availability_info": 14,
+        "utter_ask_availability": 15,
+        "utter_ask_price": 16,
+        "utter_ask_product": 17,
+        "utter_faq": 18,
+        "utter_goodbye": 19,
+        "utter_greet": 20
+      },
+      "entities": {
+        "product": 0
+      },
+      "slots": {
+        "product_0": 0
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

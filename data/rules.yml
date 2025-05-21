@@ -1,0 +1,35 @@
+rules:
+  - rule: Chào hỏi người dùng
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Tạm biệt người dùng
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Hỏi về phương thức thanh toán
+    steps:
+      - intent: payment_method
+      - action: utter_payment_method
+
+  - rule: Hỏi về phí giao hàng
+    steps:
+      - intent: shipping_fee
+      - action: utter_shipping_fee
+
+  - rule: Hỏi về thời gian giao hàng
+    steps:
+      - intent: delivery_time
+      - action: utter_delivery_time
+
+  - rule: Hỏi về địa chỉ cửa hàng
+    steps:
+      - intent: store_location
+      - action: utter_store_location
+
+  - rule: Hỏi về giờ làm việc
+    steps:
+      - intent: working_hours
+      - action: utter_working_hours

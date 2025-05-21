@@ -1,0 +1,12 @@
+{
+  "0": "ask_availability",
+  "1": "ask_comparison",
+  "2": "ask_price",
+  "3": "ask_product",
+  "4": "ask_promotion",
+  "5": "ask_specification",
+  "6": "faq",
+  "7": "goodbye",
+  "8": "greet",
+  "9": "inform"
+}

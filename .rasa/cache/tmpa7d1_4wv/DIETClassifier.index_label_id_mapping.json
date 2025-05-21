@@ -1,0 +1,9 @@
+{
+  "0": "ask_availability",
+  "1": "ask_price",
+  "2": "ask_product",
+  "3": "faq",
+  "4": "goodbye",
+  "5": "greet",
+  "6": "inform"
+}

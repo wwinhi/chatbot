@@ -1,0 +1,38 @@
+version: "3.1"
+# Định nghĩa pipeline: Cách Rasa xử lý các bước NLU
+pipeline:
+- name: WhitespaceTokenizer
+- name: RegexFeaturizer
+- name: CountVectorsFeaturizer
+
+- name: DIETClassifier
+  epochs: 150
+  constrain_similarities: true
+  batch_size: 32
+  learning_rate: 0.001
+  tensorboard_log_directory:
+  early_stopping:
+    patience: 5
+
+- name: EntitySynonymMapper
+- name: ResponseSelector
+  epochs: 150
+  batch_size: 32
+  learning_rate: 0.001
+
+policies:
+- name: RulePolicy
+- name: TEDPolicy
+  tensorboard_log_directory: "./logs"
+  tensorboard_log_level: epoch
+  core_fallback_threshold: 0.3
+  core_fallback_action_name: "utter_fallback"
+  enable_fallback_prediction: true
+  epochs: 150
+  batch_size: 32
+  learning_rate: 0.001
+  early_stopping:
+    patience: 5
+language: vi
+#   url: "http://localhost:5055/webhook"
+assistant_id: 20241224-111830-spatial-crest

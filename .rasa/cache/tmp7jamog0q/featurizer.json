@@ -1,0 +1,65 @@
+{
+  "type": "MaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "ask_availability": 0,
+        "ask_price": 1,
+        "ask_product": 2,
+        "ask_promotion": 3,
+        "ask_support": 4,
+        "back": 5,
+        "check_order_status": 6,
+        "complain_issue": 7,
+        "faq": 8,
+        "goodbye": 9,
+        "greet": 10,
+        "inform": 11,
+        "nlu_fallback": 12,
+        "out_of_scope": 13,
+        "request_return": 14,
+        "restart": 15,
+        "session_start": 16
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "utter_price_info": 13,
+        "utter_availability_info": 14,
+        "utter_ask_availability": 15,
+        "utter_ask_price": 16,
+        "utter_ask_product": 17,
+        "utter_ask_promotion": 18,
+        "utter_ask_support": 19,
+        "utter_check_order_status": 20,
+        "utter_complain_issue": 21,
+        "utter_faq": 22,
+        "utter_goodbye": 23,
+        "utter_greet": 24,
+        "utter_request_return": 25
+      },
+      "entities": {
+        "product": 0
+      },
+      "slots": {
+        "product_0": 0
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

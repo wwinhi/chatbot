@@ -1,0 +1,36 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"store_location\"}}]": "utter_store_location",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"store_location\"}}, {\"prev_action\": {\"action_name\": \"utter_store_location\"}, \"user\": {\"intent\": \"store_location\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"payment_method\"}}]": "utter_payment_method",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"payment_method\"}}, {\"prev_action\": {\"action_name\": \"utter_payment_method\"}, \"user\": {\"intent\": \"payment_method\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"working_hours\"}}]": "utter_working_hours",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"working_hours\"}}, {\"prev_action\": {\"action_name\": \"utter_working_hours\"}, \"user\": {\"intent\": \"working_hours\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"shipping_fee\"}}]": "utter_shipping_fee",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"shipping_fee\"}}, {\"prev_action\": {\"action_name\": \"utter_shipping_fee\"}, \"user\": {\"intent\": \"shipping_fee\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}]": "utter_greet",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}, {\"prev_action\": {\"action_name\": \"utter_greet\"}, \"user\": {\"intent\": \"greet\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"delivery_time\"}}]": "utter_delivery_time",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"delivery_time\"}}, {\"prev_action\": {\"action_name\": \"utter_delivery_time\"}, \"user\": {\"intent\": \"delivery_time\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "predicting default action with intent back",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"delivery_time\"}}, {\"prev_action\": {\"action_name\": \"utter_delivery_time\"}, \"user\": {\"intent\": \"delivery_time\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"payment_method\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"working_hours\"}}, {\"prev_action\": {\"action_name\": \"utter_working_hours\"}, \"user\": {\"intent\": \"working_hours\"}}]",
+      "predicting default action with intent session_start",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"store_location\"}}, {\"prev_action\": {\"action_name\": \"utter_store_location\"}, \"user\": {\"intent\": \"store_location\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"store_location\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"delivery_time\"}}]",
+      "predicting default action with intent restart",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"payment_method\"}}, {\"prev_action\": {\"action_name\": \"utter_payment_method\"}, \"user\": {\"intent\": \"payment_method\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"working_hours\"}}]"
+    ]
+  }
+}

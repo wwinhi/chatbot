@@ -1,0 +1,75 @@
+version: "3.1"
+
+stories:
+  - story: Kiểm tra đơn hàng
+    steps:
+      - intent: track_order
+      - action: utter_ask_order_id
+      - intent: track_order
+        entities:
+          - order_id: "12345"
+      - action: action_track_order
+
+  - story: Hỏi về tình trạng sản phẩm
+    steps:
+      - intent: ask_product_status
+      - action: action_check_product_status
+
+  - story: Hỏi về chính sách bảo hành
+    steps:
+      - intent: warranty_policy
+      - action: utter_warranty_policy
+
+  - story: Kiểm tra bảo hành với thông tin sản phẩm
+    steps:
+      - intent: check_warranty_with_product
+      - action: action_check_warranty  # Hành động kiểm tra thông tin bảo hành
+
+  - story: Hỏi về phí giao hàng
+    steps:
+      - intent: shipping_fee
+      - action: utter_shipping_fee
+
+  - story: Khiếu nại về dịch vụ
+    steps:
+      - intent: complaint
+      - action: utter_complaint
+      - action: action_transfer_to_cskh
+
+  - story: Hỏi về chính sách hoàn trả
+    steps:
+      - intent: return_policy
+      - action: utter_return_policy
+
+  - story: Phản hồi sản phẩm lỗi
+    steps:
+      - intent: product_defect
+      - action: utter_product_defect
+      - action: action_transfer_to_cskh
+
+  - story: Hỏi về khuyến mãi
+    steps:
+      - intent: promotion
+      - action: action_go_to_promotion_page
+
+  - story: Test API OpenFaaS
+    steps:
+      - intent: call_OpenFaaS
+      - action: action_call_openfaas
+
+  - story: interactive_story_1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_product_status
+        entities:
+          - product_name: Xiaomi 13T
+      - slot_was_set:
+          - product_name: Xiaomi 13T
+      - action: action_check_product_status
+      - slot_was_set:
+          - product_status: Hết hàng
+      - intent: warranty_policy
+      - action: utter_warranty_policy
+      - intent: goodbye
+      - action: utter_goodbye
